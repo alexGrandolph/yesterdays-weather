@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   def create
     if params[:password] == params[:password_confirmation]
       @user = User.create(new_user_params)
+      @user.receive_texts = false
       if @user.save
         session[:user_id] = @user.id
         flash[:success] = "Welcome, #{@user.username}!"

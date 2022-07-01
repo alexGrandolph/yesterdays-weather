@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_many :locations
 
+  def send_daily_sms
+
+
+  end 
+
 end
