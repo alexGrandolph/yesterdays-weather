@@ -3,7 +3,7 @@ class Users::TextsController < ApplicationController
   def new
     if current_user
       current_user.update(receive_texts: true)
-      binding.pry
+      current_user.send_daily_sms(current_user)
 
     redirect_to '/dashboard'
     else

@@ -6,7 +6,7 @@ RSpec.describe 'User Dashboard' do
 
     fill_in 'Username:', with: 'Skeeter8'
     fill_in 'Email:', with: 'skeeter@corgi.com'
-    fill_in 'Phone Number:', with: '3033033033'
+    fill_in 'Phone Number:', with: '3033235373'
     fill_in 'Password:', with: 'test'
     fill_in 'Password Confirmation:', with: 'test'
     click_on 'Submit'
@@ -27,7 +27,7 @@ RSpec.describe 'User Dashboard' do
 
     fill_in 'Username:', with: 'Skeeter8'
     fill_in 'Email:', with: 'skeeter@corgi.com'
-    fill_in 'Phone Number:', with: '3033033033'
+    fill_in 'Phone Number:', with: '3033235373'
     fill_in 'Password:', with: 'test'
     fill_in 'Password Confirmation:', with: 'test'
     click_on 'Submit'
@@ -52,7 +52,7 @@ RSpec.describe 'User Dashboard' do
   it 'has a link to receive texts for a location' do
     sign_up_add_location 
     visit '/dashboard'
-    save_and_open_page
+    # save_and_open_page
     click_link "Receive Texts for This Location"
     
 

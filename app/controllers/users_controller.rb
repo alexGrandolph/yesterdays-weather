@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
     if current_user
-
+      
     else
       flash[:notice] = "please sign up or sign in"
       redirect_to '/'
