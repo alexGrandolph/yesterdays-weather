@@ -15,7 +15,7 @@ RSpec.describe 'New User Page' do
     fill_in 'Phone Number:', with: '3033033033'
     fill_in 'Password:', with: 'test'
     fill_in 'Password Confirmation:', with: 'test'
-
+    click_on 'Submit'
     expect(current_path).to eq('/dashboard')
 
   end
