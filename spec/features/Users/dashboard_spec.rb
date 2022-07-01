@@ -1,11 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'New User Page' do
-  it 'clicking link to Sign Up brings user to new user page' do
-    visit '/'
-    click_on 'Sign Up'
-    expect(current_path).to eq('/register')
-  end
+RSpec.describe 'User Dashboard' do
 
   it 'filling in sign up form correctly redirects to users dashboard' do
     visit '/register'
@@ -16,8 +11,8 @@ RSpec.describe 'New User Page' do
     fill_in 'Password:', with: 'test'
     fill_in 'Password Confirmation:', with: 'test'
     click_on 'Submit'
-
-    expect(current_path).to eq('/dashboard')
+    
+    expect(page).to have_content('Welcome, Skeeter8')
 
   end
 end
