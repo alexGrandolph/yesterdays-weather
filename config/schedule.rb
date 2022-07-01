@@ -22,6 +22,19 @@ set :output, "log/cron.log"
 set :environment, "development"
 
 every 1.minute do
-  runner "User.send_daily_sms"
   rake "texts:sms_sender_daily"
 end 
+
+every 1.minute do
+   runner "User.send_daily_sms"
+   rake "text:sms_sender_daily"
+end
+every 1.minute do
+  #  runner "User.send_daily_sms"
+   rake "text:sms_sender_daily"
+end
+
+every 1.minute do
+   runner "User.some_method"
+   rake "example:say_hello"
+end

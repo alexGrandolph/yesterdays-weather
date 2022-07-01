@@ -11,7 +11,7 @@ class User < ApplicationRecord
     location = current_user.locations.first.name
     yesterday = Date.yesterday.strftime("%Y/%m/%d")
     date = yesterday.gsub("/","-")
-    binding.pry
+    # binding.pry
     conn = Faraday.new(url: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/") do |c|
     end 
     response = conn.get("timeline/#{location}/#{date}?unitGroup=us&key=#{ENV['VISUAL_CROSSING']}")
@@ -26,7 +26,10 @@ class User < ApplicationRecord
 
     twilio = TwilioClient.new
     twilio.send_text(current_user, message)
-    binding.pry
+    # binding.pry
   end 
 
+  def some_method
+
+  end 
 end
