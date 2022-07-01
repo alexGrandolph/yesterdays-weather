@@ -8,6 +8,8 @@
 <br>
 <br>
 
-Your Current Location: <%= current_user.locations %>
+Your Current Location: <% current_user.locations.each do |location|%>
+                         <li><%= location.name %></li>
+                       <% end %>
 <br>
 <br>

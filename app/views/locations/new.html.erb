@@ -1,0 +1,11 @@
+<h1>Add a Location to Your Account</h1>
+
+<%= form_with url: "/locations", class: "new_form", local: true do |form| %>
+  
+  <div class="location_field">
+    <%= form.label :location, 'Location:', class: "left" %>
+    <%= form.text_field :location, class: "right" %>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+<% end %>
