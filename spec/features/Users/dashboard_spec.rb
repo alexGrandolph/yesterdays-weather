@@ -25,7 +25,8 @@ RSpec.describe 'User Dashboard' do
     fill_in 'Password Confirmation:', with: 'test'
     click_on 'Submit'
     
-    expect(page).to have_link('Add Location')
+    click_link 'Add Location'
+    expect(current_path).to eq('/locations/new')
   end
 
 
