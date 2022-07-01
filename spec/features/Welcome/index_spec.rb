@@ -5,7 +5,7 @@ RSpec.describe 'Welcome/Homepage' do
     visit "/"
     save_and_open_page
     expect(page).to have_link("Home")
-    expect(page).to have_link("Sign In")
+    expect(page).to have_link("Sign Up")
 
   end
 end
