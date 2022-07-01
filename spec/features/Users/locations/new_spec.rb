@@ -16,9 +16,9 @@ RSpec.describe 'User Dashboard' do
     click_link "Add Location"
     fill_in 'Location:', with: 'Evergreen,CO'
     click_on 'Submit'
-    save_and_open_page
+    
     expect(current_path).to eq('/dashboard')
-    expect(page).to have_content("Evergreen CO")
+    expect(page).to have_content("Evergreen,CO")
   end
 
 
