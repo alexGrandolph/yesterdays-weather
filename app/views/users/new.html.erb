@@ -1,0 +1,34 @@
+
+  <center>
+    <h1>Create an Account</h1>
+  </center>
+
+<%= form_with url: "/register", class: "new_form", local: true do |form| %>
+  
+  <div class="name_field">
+    <%= form.label :username, 'Username:', class: "left" %>
+    <%= form.text_field :username, class: "right" %>
+  </div>
+
+  <div class="email_field">
+    <%= form.label :email, 'Email:', class: "left" %>
+    <%= form.text_field :email, class: "right" %>
+  </div>
+
+  <div class="phone_field">
+    <%= form.label :phone, 'Phone Number:', class: "left" %>
+    <%= form.text_field :phone, class: "right" %>
+  </div>
+
+
+  <div class="password_field">
+    <%= form.label :password, 'Password:', class: "left" %>
+    <%= form.password_field :password, class: "right" %>
+  </div>
+  <div class="confirm_field">
+    <%= form.label :password_confirmation, 'Password Confirmation:', class: "left" %>
+    <%= form.password_field :password_confirmation, class: "right" %>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+<% end %>
