@@ -16,6 +16,7 @@ RSpec.describe 'New User Page' do
     fill_in 'Password:', with: 'test'
     fill_in 'Password Confirmation:', with: 'test'
     click_on 'Submit'
+    save_and_open_page
     expect(current_path).to eq('/dashboard')
 
   end

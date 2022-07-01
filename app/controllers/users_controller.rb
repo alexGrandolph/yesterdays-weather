@@ -1,5 +1,14 @@
 class UsersController < ApplicationController
 
+  def show
+    if current_user
+
+    else
+      flash[:notice] = "please sign up or sign in"
+      redirect_to '/'
+    end 
+  end 
+
   def new
     @user = User.new
   end 
